@@ -17,7 +17,7 @@ final getSchedules = _getSchedules();
 Middleware<AppState> _getSchedules() {
   return (Store store, action, NextDispatcher next) async {
     if (action is ScheduleListRequest) {
-      QuerySnapshot querySnapshot = await Firestore.instance.collection("reservations").where('doctorId', isEqualTo: action.doctorId).getDocuments();
+      QuerySnapshot querySnapshot = await Firestore.instance.collection("reservations").where('doctorId', isEqualTo: action.doctorId).startAt([action.now]).endAt([action.now.add(action.duration)]).getDocuments();
       var list = querySnapshot.documents;
       store.dispatch(ScheduleListRequestSuccess(list.map((i) => new Schedule.fromSnapshot(i)).toList()));
     }

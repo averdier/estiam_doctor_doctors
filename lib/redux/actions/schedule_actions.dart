@@ -5,8 +5,10 @@ import 'package:estiam_doctor_doctors/models/user.dart';
 /// On schedule list request
 class ScheduleListRequest {
   final String doctorId;
+  final DateTime now;
+  final Duration duration;
 
-  ScheduleListRequest(this.doctorId);
+  ScheduleListRequest(this.doctorId, this.now, this.duration);
 }
 
 /// On schedule list request success
