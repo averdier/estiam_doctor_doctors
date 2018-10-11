@@ -1,0 +1,102 @@
+{
+  "project_info": {
+    "project_number": "919269692902",
+    "firebase_url": "https://fluttertp.firebaseio.com",
+    "project_id": "fluttertp",
+    "storage_bucket": "fluttertp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919269692902:android:02ba6825216a1cd5",
+        "android_client_info": {
+          "package_name": "dev.rastadev.estiamdoctorclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919269692902-10hme2dvc26bmd0p2lkgp3mjvpj05lqn.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.rastadev.estiamdoctorclient",
+            "certificate_hash": "52008fded995ba33d74bf8c6a04877dc0f958cbc"
+          }
+        },
+        {
+          "client_id": "919269692902-aes7l02g8fb4lss5bai3ah8o9rc3a7c4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.rastadev.estiamdoctorclient",
+            "certificate_hash": "ac64ec2a4e1d5d79ece0c0dab6fddd0a7c70b12c"
+          }
+        },
+        {
+          "client_id": "919269692902-90kn9vckb08iclqgdkeme5q3kou0cvqj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dev.rastadev.estiamdoctorclient",
+            "certificate_hash": "6c8ae1708de50ac3249d6d7458e4849a59167d69"
+          }
+        },
+        {
+          "client_id": "919269692902-65p0nk1ujugjn3lkacuveucuee1pn9vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzzlomTwJBE3U8nvTTOoCDdGZBC11Uxg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "919269692902-65p0nk1ujugjn3lkacuveucuee1pn9vp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:919269692902:android:50d46a0fefae8a01",
+        "android_client_info": {
+          "package_name": "dev.rastadev.estiamdoctordoctors"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "919269692902-65p0nk1ujugjn3lkacuveucuee1pn9vp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCgzzlomTwJBE3U8nvTTOoCDdGZBC11Uxg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

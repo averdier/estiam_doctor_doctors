@@ -57,7 +57,7 @@ class _LoginFormState extends State<LoginForm> {
                 onPressed: () {
                   _submit();
                   StoreProvider.of<AppState>(context).dispatch(
-                    new UserLoginRequest(context, _username, _password)
+                    new UserLoginRequest(context)
                   );
                 }
             )

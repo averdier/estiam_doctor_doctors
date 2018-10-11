@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:redux/redux.dart';
 import 'package:estiam_doctor_doctors/models/user.dart';
@@ -6,12 +5,10 @@ import 'package:estiam_doctor_doctors/redux/models/app_state.dart';
 
 /// On login request
 class UserLoginRequest {
-  final BuildContext context;
-  final String username;
-  final String password;
 
+  final BuildContext context;
   /// Constructor
-  UserLoginRequest(this.context, this.username, this.password);
+  UserLoginRequest(this.context);
 }
 
 /// On login success
@@ -31,12 +28,24 @@ class UserLoginFailure {
 }
 
 /// On user logout
-class UserLogout {}
+class UserLogout {
+  final BuildContext context;
 
-/// Logout user and go to login
-final Function logout = (BuildContext context) {
-  return (Store<AppState> store) {
-    store.dispatch(new UserLogout());
-    Navigator.of(context).pushNamedAndRemoveUntil('/login', (_) => false);
-  };
-};
+  UserLogout(this.context);
+}
+
+class LogOutSuccessful {
+  LogOutSuccessful();
+  @override
+  String toString() {
+    return 'LogOut{user: null}';
+  }
+}
+
+class LogOutFail {
+  final dynamic error;
+  LogOutFail(this.error);
+  String toString() {
+    return '{There was an error logging out: $error}';
+  }
+}
