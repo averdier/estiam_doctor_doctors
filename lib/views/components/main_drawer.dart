@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_redux/flutter_redux.dart';
 import 'package:estiam_doctor_doctors/redux/actions/auth_actions.dart';
-import 'package:estiam_doctor_doctors/redux/actions/kebab_actions.dart';
 import 'package:estiam_doctor_doctors/redux/models/app_state.dart';
 import 'package:estiam_doctor_doctors/styles/colors.dart';
 
@@ -42,19 +41,6 @@ class MainDrawer extends StatelessWidget {
                 print('You pressed Home');
                 Navigator.of(context).pushReplacementNamed('/main');
               }
-          ),
-
-          /// Kebabs section
-          new ListTile(
-            leading: new Icon(Icons.shopping_basket),
-            title: new Text('Kebabs'),
-            onTap: () {
-              print('You pressed Kebabs');
-              StoreProvider.of<AppState>(context).dispatch(
-                  new KebabListRequest()
-              );
-              Navigator.of(context).pushReplacementNamed('/kebabs');
-            }
           ),
 
           /// Commands section

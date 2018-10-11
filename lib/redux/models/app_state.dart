@@ -1,38 +1,38 @@
 import 'package:meta/meta.dart';
-import 'package:estiam_doctor_doctors/models/kebab.dart';
+import 'package:estiam_doctor_doctors/models/schedule.dart';
 import 'package:estiam_doctor_doctors/redux/models/auth_state.dart';
-import 'package:estiam_doctor_doctors/redux/models/kebab_state.dart';
+import 'package:estiam_doctor_doctors/redux/models/schedule_state.dart';
 
 @immutable
 class AppState {
   final AuthState auth;
-  final KebabState kebab;
+  final ScheduleState schedule;
 
   /// Constructor
-  AppState({AuthState auth, KebabState kebab}):
+  AppState({AuthState auth, ScheduleState schedule}):
         auth = auth ?? new AuthState(),
-        kebab = kebab ?? new KebabState(kebabs: new List<Kebab>());
+        schedule = schedule ?? new ScheduleState(schedules: new List<Schedule>());
 
   static AppState rehydrationJSON(dynamic json) => new AppState(
       auth: new AuthState.fromJSON(json['auth']),
-      kebab: new KebabState.fromJSON(json['kebab'])
+      schedule: new ScheduleState.fromJSOM(json['schedule'])
   );
 
   /// Return current state in JSON
   Map<String, dynamic> toJson() => {
     'auth': auth.toJSON(),
-    'kebab': kebab.toJSON()
+    'schedule': schedule.toJSON()
   };
 
   /// Return copy of state
   AppState copyWith({
     bool rehydrated,
     AuthState auth,
-    KebabState kebab,
+    ScheduleState schedule,
   }) {
     return new AppState(
         auth: auth ?? this.auth,
-        kebab: kebab ?? this.kebab
+        schedule: schedule ?? this.schedule
     );
   }
 
@@ -40,7 +40,7 @@ class AppState {
   String toString() {
     return '''AppState{
             auth: $auth,
-            kebab: $kebab
+            schedule: $schedule
         }''';
   }
 }
